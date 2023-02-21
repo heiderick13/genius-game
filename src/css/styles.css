@@ -13,18 +13,35 @@ body {
 }
 
 .container {
+  position: relative;
   display: block;
   width: 50%;
   margin: auto;
+  clip-path: circle();
 }
 
 .btn {
-  margin: 25px;
   display: inline-block;
-  height: 200px;
-  width: 200px;
-  border: 10px solid black;
-  border-radius: 20%;
+  height: 250px;
+  width: 250px;
+}
+
+#start-btn {
+  position: absolute;
+  top: 36%;
+  left: 38%;
+  right: auto;
+  padding: 3rem 2rem;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 50%;
+  border: 5px solid black;
+  cursor: pointer;
+}
+
+#start-btn:active {
+  scale: 0.9;
 }
 
 .game-over {
@@ -51,4 +68,16 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+@media screen and (max-width: 1030px) {
+  .btn {
+    height: 200px;
+    width: 200px;
+  }
+
+  #start-btn {
+    left: 38%;
+    padding: 2rem 1rem;
+  }
 }

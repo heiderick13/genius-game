@@ -7,7 +7,7 @@ $(document).ready(() => {
   let clicks = 0;
   const gameTitle = $("#level-title");
 
-  $(document).keydown((e) => {
+  $("#start-btn").click((e) => {
     if (!started) {
       nextSequence();
 
@@ -66,7 +66,7 @@ $(document).ready(() => {
     $("body").removeClass("game-over");
     started = false;
     level = 0;
-    gameTitle.text("Press A Key to Start");
+    gameTitle.text("Press Start to begin");
     gamePattern = [];
     userClickedPattern = [];
   }
